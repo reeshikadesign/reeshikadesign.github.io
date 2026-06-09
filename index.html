@@ -1,67 +1,122 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My Portfolio</title>
+  <title>Reeshika Kabir</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
-<style>
-  body {
-    font-family: Inter, sans-serif;
-    margin: 0;
-    background: #f7f7f7;
-    color: #111;
-  }
 
-  .container {
-    max-width: 800px;
-    margin: 100px auto;
-    padding: 40px;
-    background: white;
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  }
+  <style>
+    body {
+      margin: 0;
+      font-family: Inter, sans-serif;
+      color: white;
+      overflow: hidden;
+    }
 
-  h1 {
-    font-size: 40px;
-    margin-bottom: 10px;
-  }
+    /* Animated background */
+    .bg {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(-45deg, #111, #1a1a2e, #0f3460, #16213e);
+      background-size: 400% 400%;
+      animation: gradientMove 10s ease infinite;
+      z-index: -1;
+    }
 
-  p {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #444;
-  }
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
 
-  /* 👇 ADD THIS */
-  .tag {
-    display: inline-block;
-    background: #111;
-    color: white;
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 12px;
-    margin-top: 10px;
-    text-decoration: none;
-    transition: 0.2s ease;
-  }
+    .container {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+      animation: fadeIn 1.5s ease;
+    }
 
-  .tag:hover {
-    background: #333;
-    transform: scale(1.05);
-  }
-</style>
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-size: 60px;
+      margin: 0;
+      letter-spacing: 2px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #cfcfcf;
+      margin-top: 10px;
+    }
+
+    .buttons {
+      margin-top: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      margin: 10px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .primary {
+      background: white;
+      color: black;
+    }
+
+    .primary:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px rgba(255,255,255,0.4);
+    }
+
+    .secondary {
+      border: 1px solid white;
+      color: white;
+    }
+
+    .secondary:hover {
+      background: white;
+      color: black;
+      transform: scale(1.1);
+    }
+
+    /* floating effect */
+    .floating {
+      animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+  </style>
 </head>
 
 <body>
-  <div class="container">
-    <h1>Reeshika Kabir</h1>
-    <p>Graphic Designer</p>
-    
-<a href="portfolio.html" class="tag">Portfolio</a>    
-    <h2>About Me</h2>
-    <p>
-      Write a short intro about yourself here. Keep it simple, confident, and clear.
-    </p>
 
+  <div class="bg"></div>
+
+  <div class="container floating">
+    <h1>Reeshika Kabir</h1>
+    <p>Graphic Designer • HR • NGO Field Work • Future Legal Professional</p>
+
+    <div class="buttons">
+      <a href="portfolio.html" class="btn primary">View Portfolio</a>
+      <a href="#" class="btn secondary">Contact</a>
+    </div>
   </div>
+
 </body>
 </html>
