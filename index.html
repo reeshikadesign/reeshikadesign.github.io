@@ -6,130 +6,208 @@
 <title>Reeshika Kabir</title>
 
 <style>
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:#f5f5f5;
-}
+    color:#111;
+    overflow-x:hidden;
 
-.container{
-    width:1000px;
-    height:600px;
-    background:white;
-    position:relative;
-    overflow:hidden;
-    border:2px solid #222;
-}
-
-/* Top line */
-.top-info{
-    position:absolute;
-    top:35px;
-    left:70px;
-    font-size:20px;
-    color:#555;
-}
-
-.top-info span{
-    margin-right:25px;
-}
-
-/* Gradient shape */
-.gradient-blob{
-    position:absolute;
-    width:700px;
-    height:700px;
-    top:-120px;
-    left:260px;
     background:
-        radial-gradient(circle at 30% 40%, rgba(255,0,200,0.55), transparent 40%),
-        radial-gradient(circle at 70% 35%, rgba(255,220,0,0.45), transparent 45%),
-        radial-gradient(circle at 60% 70%, rgba(255,180,0,0.35), transparent 45%);
-    filter: blur(40px);
+    radial-gradient(circle at 25% 30%,
+    rgba(255,0,221,.45),
+    transparent 25%),
+
+    radial-gradient(circle at 80% 20%,
+    rgba(255,230,0,.40),
+    transparent 30%),
+
+    radial-gradient(circle at 65% 70%,
+    rgba(255,140,0,.30),
+    transparent 35%),
+
+    #ffffff;
 }
 
-/* Name */
-.name{
-    position:absolute;
-    left:90px;
-    top:180px;
-    z-index:2;
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding-left:10%;
 }
 
-.name h1{
-    font-size:72px;
-    line-height:0.95;
+.hero h1{
+    font-size:8rem;
+    line-height:.9;
     font-weight:500;
-    color:#222;
 }
 
-.name p{
+.subtitle{
     margin-top:20px;
-    font-size:24px;
+    font-size:1.5rem;
     color:#444;
 }
 
-/* Divider line */
-.divider{
-    position:absolute;
-    top:50%;
-    width:100%;
-    border-top:1px solid #cfcfcf;
-}
-
-/* Vertical portfolio */
 .portfolio-link{
-    position:absolute;
-    right:40px;
-    top:50%;
-    transform:translateY(-50%) rotate(90deg);
+    margin-top:18px;
     text-decoration:none;
-    z-index:3;
-}
-
-.portfolio-link h2{
-    font-size:130px;
-    font-weight:900;
     color:#111;
-    letter-spacing:2px;
-    transition:0.3s;
+    font-size:1.3rem;
+    width:fit-content;
+    transition:.3s;
 }
 
-.portfolio-link:hover h2{
-    transform:scale(1.03);
+.portfolio-link:hover{
+    transform:translateX(8px);
 }
+
+/* SECTION */
+
+section{
+    padding:120px 10%;
+}
+
+.section-title{
+    font-size:3rem;
+    margin-bottom:40px;
+}
+
+.about-text{
+    max-width:750px;
+    font-size:1.1rem;
+    line-height:1.9;
+    color:#444;
+}
+
+/* CONTACT */
+
+.contact-container{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.contact-item{
+    font-size:1.2rem;
+}
+
+.contact-item a{
+    color:#111;
+    text-decoration:none;
+}
+
+.contact-item a:hover{
+    text-decoration:underline;
+}
+
+/* FOOTER */
+
+footer{
+    padding:50px;
+    text-align:center;
+    color:#666;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero{
+    padding:40px;
+}
+
+.hero h1{
+    font-size:4.5rem;
+}
+
+.section-title{
+    font-size:2rem;
+}
+
+}
+
 </style>
 </head>
 <body>
 
-<div class="container">
+<div class="hero">
 
-    <div class="gradient-blob"></div>
+    <h1>
+        Reeshika<br>
+        Kabir
+    </h1>
 
-    <div class="top-info">
-        <span>Graphic Designer ↗</span>
-    </div>
-
-    <div class="name">
-        <h1>Reeshika<br>Kabir</h1>
-    </div>
-
-    <div class="divider"></div>
+    <p class="subtitle">
+        Graphic Designer
+    </p>
 
     <a href="portfolio.html" class="portfolio-link">
-        <h2>Portfolio</h2>
+        Portfolio →
     </a>
 
 </div>
+
+<section id="about">
+
+    <h2 class="section-title">About Me</h2>
+
+    <p class="about-text">
+        Hi, I'm Reeshika Kabir, a graphic designer passionate about
+        visual storytelling, branding, digital design, and creating
+        meaningful experiences through design. I enjoy transforming
+        ideas into visually compelling work that balances creativity
+        and clarity.
+        <br><br>
+        My portfolio showcases a collection of projects ranging from
+        social media designs and marketing materials to branding and
+        creative visual concepts.
+    </p>
+
+</section>
+
+<section id="contact">
+
+    <h2 class="section-title">Contact</h2>
+
+    <div class="contact-container">
+
+        <div class="contact-item">
+            Email: your@email.com
+        </div>
+
+        <div class="contact-item">
+            Instagram:
+            <a href="#">
+                @yourusername
+            </a>
+        </div>
+
+        <div class="contact-item">
+            Behance:
+            <a href="#">
+                behance.net/yourusername
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    © 2026 Reeshika Kabir
+</footer>
 
 </body>
 </html>
