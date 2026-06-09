@@ -15,22 +15,12 @@
 }
 
 body{
-    background:
-    radial-gradient(circle at 20% 25%,
-    rgba(255,0,221,.35),
-    transparent 25%),
-
-    radial-gradient(circle at 80% 15%,
-    rgba(255,230,0,.35),
-    transparent 30%),
-
-    radial-gradient(circle at 70% 80%,
-    rgba(255,140,0,.25),
-    transparent 35%),
-
-    white;
-
     min-height:100vh;
+    background:
+    radial-gradient(circle at 20% 25%, rgba(255,0,221,.35), transparent 25%),
+    radial-gradient(circle at 80% 15%, rgba(255,230,0,.35), transparent 30%),
+    radial-gradient(circle at 70% 80%, rgba(255,140,0,.25), transparent 35%),
+    white;
 }
 
 /* HEADER */
@@ -53,7 +43,7 @@ body{
     font-size:1.1rem;
 }
 
-/* GALLERY GRID */
+/* GALLERY */
 
 .gallery{
     padding:0 10% 100px;
@@ -65,24 +55,24 @@ body{
 /* PROJECT CARD */
 
 .project{
-    background:white;
+    background:#fff;
     border-radius:14px;
     overflow:hidden;
     box-shadow:0 10px 30px rgba(0,0,0,.08);
-    transition:.3s ease;
+    transition:0.3s ease;
 }
 
 .project:hover{
     transform:translateY(-6px);
 }
 
-/* IMAGE (works for landscape + portrait) */
+/* IMAGE FIX (works for ALL shapes) */
 
 .project img{
     width:100%;
     height:auto;
     display:block;
-    transition:.4s ease;
+    transition:0.3s ease;
 }
 
 .project:hover img{
@@ -102,8 +92,8 @@ body{
 
 .project-info p{
     color:#666;
-    line-height:1.6;
     font-size:0.95rem;
+    line-height:1.6;
 }
 
 /* MOBILE */
@@ -134,13 +124,12 @@ body{
 <!-- HEADER -->
 <div class="header">
     <h1>Portfolio</h1>
-    <a href="index.html" class="home-link">← Home</a>
+    <a class="home-link" href="index.html">← Home</a>
 </div>
 
 <!-- GALLERY -->
 <div class="gallery">
 
-    <!-- PROJECT 1 -->
     <div class="project">
         <img src="images/design1.jpg" alt="Design 1">
         <div class="project-info">
@@ -149,7 +138,6 @@ body{
         </div>
     </div>
 
-    <!-- PROJECT 2 -->
     <div class="project">
         <img src="images/design2.jpg" alt="Design 2">
         <div class="project-info">
@@ -158,11 +146,34 @@ body{
         </div>
     </div>
 
-    <!-- PROJECT 3 -->
     <div class="project">
         <img src="images/design3.jpg" alt="Design 3">
         <div class="project-info">
             <h3>Project Title 3</h3>
+            <p>Short description of the design.</p>
+        </div>
+    </div>
+
+    <div class="project">
+        <img src="images/design4.jpg" alt="Design 4">
+        <div class="project-info">
+            <h3>Project Title 4</h3>
+            <p>Short description of the design.</p>
+        </div>
+    </div>
+
+    <div class="project">
+        <img src="images/design5.jpg" alt="Design 5">
+        <div class="project-info">
+            <h3>Project Title 5</h3>
+            <p>Short description of the design.</p>
+        </div>
+    </div>
+
+    <div class="project">
+        <img src="images/design6.jpg" alt="Design 6">
+        <div class="project-info">
+            <h3>Project Title 6</h3>
             <p>Short description of the design.</p>
         </div>
     </div>
