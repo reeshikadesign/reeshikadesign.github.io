@@ -1,144 +1,135 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Reeshika Kabir</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reeshika Kabir</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Inter, sans-serif;
-      color: white;
-      overflow: hidden;
-      background: radial-gradient(circle at top, #0b0f2a, #05060f, #02030a);
-    }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
-    /* 🌸 PETALS */
-    .petal {
-      position: fixed;
-      top: -10px;
-      width: 10px;
-      height: 10px;
-      background: rgba(180, 200, 255, 0.85);
-      border-radius: 50%;
-      box-shadow: 0 0 12px rgba(180, 200, 255, 0.8),
-                  0 0 24px rgba(120, 160, 255, 0.4);
-      animation: fall linear infinite;
-      opacity: 0;
-    }
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#f5f5f5;
+}
 
-    @keyframes fall {
-      0% {
-        transform: translateY(0px) translateX(0px);
-        opacity: 0;
-      }
-      10% {
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(110vh) translateX(30px) rotate(360deg);
-        opacity: 0;
-      }
-    }
+.container{
+    width:1000px;
+    height:600px;
+    background:white;
+    position:relative;
+    overflow:hidden;
+    border:2px solid #222;
+}
 
-    /* 🌙 LAYOUT */
-    .container {
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      flex-direction: column;
-      animation: fadeIn 1.5s ease;
-      padding: 20px;
-    }
+/* Top line */
+.top-info{
+    position:absolute;
+    top:35px;
+    left:70px;
+    font-size:20px;
+    color:#555;
+}
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+.top-info span{
+    margin-right:25px;
+}
 
-    h1 {
-      font-size: 60px;
-      margin: 0;
-      text-shadow: 0 0 25px rgba(140,180,255,0.6);
-      letter-spacing: 2px;
-    }
+/* Gradient shape */
+.gradient-blob{
+    position:absolute;
+    width:700px;
+    height:700px;
+    top:-120px;
+    left:260px;
+    background:
+        radial-gradient(circle at 30% 40%, rgba(255,0,200,0.55), transparent 40%),
+        radial-gradient(circle at 70% 35%, rgba(255,220,0,0.45), transparent 45%),
+        radial-gradient(circle at 60% 70%, rgba(255,180,0,0.35), transparent 45%);
+    filter: blur(40px);
+}
 
-    p {
-      font-size: 18px;
-      color: #cfcfcf;
-      margin-top: 10px;
-    }
+/* Name */
+.name{
+    position:absolute;
+    left:90px;
+    top:180px;
+    z-index:2;
+}
 
-    /* 🔘 BUTTONS */
-    .btn {
-      display: inline-block;
-      padding: 12px 24px;
-      margin: 10px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: 500;
-      transition: 0.3s;
-    }
+.name h1{
+    font-size:72px;
+    line-height:0.95;
+    font-weight:500;
+    color:#222;
+}
 
-    .primary {
-      background: white;
-      color: black;
-    }
+.name p{
+    margin-top:20px;
+    font-size:24px;
+    color:#444;
+}
 
-    .primary:hover {
-      transform: scale(1.1);
-      box-shadow: 0 0 20px rgba(255,255,255,0.4);
-    }
+/* Divider line */
+.divider{
+    position:absolute;
+    top:50%;
+    width:100%;
+    border-top:1px solid #cfcfcf;
+}
 
-    .secondary {
-      border: 1px solid white;
-      color: white;
-    }
+/* Vertical portfolio */
+.portfolio-link{
+    position:absolute;
+    right:40px;
+    top:50%;
+    transform:translateY(-50%) rotate(90deg);
+    text-decoration:none;
+    z-index:3;
+}
 
-    .secondary:hover {
-      background: white;
-      color: black;
-      transform: scale(1.1);
-    }
+.portfolio-link h2{
+    font-size:130px;
+    font-weight:900;
+    color:#111;
+    letter-spacing:2px;
+    transition:0.3s;
+}
 
-    /* 🌫 FLOAT EFFECT */
-    .floating {
-      animation: float 4s ease-in-out infinite;
-    }
-
-    @keyframes float {
-      0% { transform: translateY(0px); }
-      50% { transform: translateY(-10px); }
-      100% { transform: translateY(0px); }
-    }
-
-  </style>
+.portfolio-link:hover h2{
+    transform:scale(1.03);
+}
+</style>
 </head>
-
 <body>
 
-  <!-- 🌸 PETALS -->
-  <div class="petal" style="left:5%; animation-duration: 8s;"></div>
-  <div class="petal" style="left:15%; animation-duration: 10s;"></div>
-  <div class="petal" style="left:25%; animation-duration: 6s;"></div>
-  <div class="petal" style="left:35%; animation-duration: 9s;"></div>
-  <div class="petal" style="left:50%; animation-duration: 7s;"></div>
-  <div class="petal" style="left:65%; animation-duration: 11s;"></div>
-  <div class="petal" style="left:80%; animation-duration: 8s;"></div>
-  <div class="petal" style="left:92%; animation-duration: 12s;"></div>
+<div class="container">
 
-  <!-- 🌙 MAIN CONTENT -->
-  <div class="container floating">
-    <h1>Reeshika Kabir</h1>
-    <p>Graphic Designer • Creative Visual Work</p>
+    <div class="gradient-blob"></div>
 
-    <div>
-      <a href="portfolio.html" class="btn primary">View Portfolio</a>
-      <a href="#" class="btn secondary">Contact</a>
+    <div class="top-info">
+        <span>Graphic Designer ↗</span>
     </div>
-  </div>
+
+    <div class="name">
+        <h1>Reeshika<br>Kabir</h1>
+    </div>
+
+    <div class="divider"></div>
+
+    <a href="portfolio.html" class="portfolio-link">
+        <h2>Portfolio</h2>
+    </a>
+
+</div>
 
 </body>
 </html>
