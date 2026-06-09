@@ -5,43 +5,43 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
 
   <style>
-    <div class="petal" style="left:10%; animation-duration: 6s;"></div>
-<div class="petal" style="left:25%; animation-duration: 8s;"></div>
-<div class="petal" style="left:40%; animation-duration: 5s;"></div>
-<div class="petal" style="left:60%; animation-duration: 7s;"></div>
-<div class="petal" style="left:75%; animation-duration: 6s;"></div>
-<div class="petal" style="left:90%; animation-duration: 9s;"></div>
     body {
       margin: 0;
       font-family: Inter, sans-serif;
       color: white;
       overflow: hidden;
+      background: radial-gradient(circle at top, #0b0f2a, #05060f, #02030a);
     }
 
-    /* Animated background */
-    
+    /* 🌸 PETALS */
     .petal {
-  position: fixed;
-  top: -10px;
-  width: 12px;
-  height: 12px;
-  background: pink;
-  border-radius: 50% 50% 50% 0;
-  opacity: 0.7;
-  animation: fall linear infinite;
-}
+      position: fixed;
+      top: -10px;
+      width: 10px;
+      height: 10px;
+      background: rgba(180, 200, 255, 0.85);
+      border-radius: 50%;
+      box-shadow: 0 0 12px rgba(180, 200, 255, 0.8),
+                  0 0 24px rgba(120, 160, 255, 0.4);
+      animation: fall linear infinite;
+      opacity: 0;
+    }
 
-@keyframes fall {
-  0% {
-    transform: translateY(0) rotate(0deg);
-    opacity: 0.8;
-  }
-  100% {
-    transform: translateY(110vh) rotate(360deg);
-    opacity: 0;
-  }
-}
+    @keyframes fall {
+      0% {
+        transform: translateY(0px) translateX(0px);
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(110vh) translateX(30px) rotate(360deg);
+        opacity: 0;
+      }
+    }
 
+    /* 🌙 LAYOUT */
     .container {
       height: 100vh;
       display: flex;
@@ -50,6 +50,7 @@
       text-align: center;
       flex-direction: column;
       animation: fadeIn 1.5s ease;
+      padding: 20px;
     }
 
     @keyframes fadeIn {
@@ -60,6 +61,7 @@
     h1 {
       font-size: 60px;
       margin: 0;
+      text-shadow: 0 0 25px rgba(140,180,255,0.6);
       letter-spacing: 2px;
     }
 
@@ -69,10 +71,7 @@
       margin-top: 10px;
     }
 
-    .buttons {
-      margin-top: 30px;
-    }
-
+    /* 🔘 BUTTONS */
     .btn {
       display: inline-block;
       padding: 12px 24px;
@@ -104,7 +103,7 @@
       transform: scale(1.1);
     }
 
-    /* floating effect */
+    /* 🌫 FLOAT EFFECT */
     .floating {
       animation: float 4s ease-in-out infinite;
     }
@@ -114,15 +113,28 @@
       50% { transform: translateY(-10px); }
       100% { transform: translateY(0px); }
     }
+
   </style>
 </head>
 
 <body>
 
+  <!-- 🌸 PETALS -->
+  <div class="petal" style="left:5%; animation-duration: 8s;"></div>
+  <div class="petal" style="left:15%; animation-duration: 10s;"></div>
+  <div class="petal" style="left:25%; animation-duration: 6s;"></div>
+  <div class="petal" style="left:35%; animation-duration: 9s;"></div>
+  <div class="petal" style="left:50%; animation-duration: 7s;"></div>
+  <div class="petal" style="left:65%; animation-duration: 11s;"></div>
+  <div class="petal" style="left:80%; animation-duration: 8s;"></div>
+  <div class="petal" style="left:92%; animation-duration: 12s;"></div>
+
+  <!-- 🌙 MAIN CONTENT -->
   <div class="container floating">
     <h1>Reeshika Kabir</h1>
-<p>Graphic Designer • Creative Visual Work</p>
-    <div class="buttons">
+    <p>Graphic Designer • Creative Visual Work</p>
+
+    <div>
       <a href="portfolio.html" class="btn primary">View Portfolio</a>
       <a href="#" class="btn secondary">Contact</a>
     </div>
